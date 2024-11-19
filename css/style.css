@@ -1,0 +1,56 @@
+/* Basic layout */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+  }
+  
+  .initial-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .menu-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    transition: bottom 0.3s ease-out;
+    z-index: 10;
+  }
+  
+  .menu-bar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-bar li {
+    margin: 0 15px;
+  }
+  
+  .menu-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .page-content {
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: position 0.3s ease-in;
+  }
+  
