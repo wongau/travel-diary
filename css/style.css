@@ -203,14 +203,15 @@ body, html {
   border-radius: 10%;
   width: 90%;
   background-color: #deeff9;
+  color: black;
 }
 
 .country-buttons a:visited, a:active {
-  color: inherit;
+  color: black;
 }
 
 .country-buttons a:hover {
-  color: inherit;
+  color: black;
   /* Start the shake animation and make the animation last for 0.5 seconds */
   animation: shake 1.25s;
 
