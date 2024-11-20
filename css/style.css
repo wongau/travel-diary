@@ -8,13 +8,29 @@ body, html {
   background-color: #f3f9fd;
 }
 
-.initial-content img {
-  position: relative;
-  height: 100vh; /* Take full viewport height */
-  width: 100vw; /* Full viewport width */
+.initial-content {
+  position: relative; /* Establishes a containing block for absolutely positioned children */
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
+}
+
+.initial-content .background-image {
+  position: relative; /* Default position for the background image */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
   object-fit: cover;
   display: block;
+}
+
+.initial-content .overlay-image {
+  position: absolute; /* Position relative to the .initial-content container */
+  bottom: 10%; /* Position near the bottom (adjust percentage as needed) */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to center image horizontally */
+  height: 10%; /* Make it smaller (adjust as needed) */
+  width: auto; /* Maintain aspect ratio */
+  filter: drop-shadow(0px 0px 40px white) drop-shadow(0px 0px 30px white) drop-shadow(0px 0px 20px white) drop-shadow(0px 0px 10px white);
 }
 
 .menu-bar {
@@ -119,7 +135,7 @@ body, html {
   background-color: #deeff9;
 }
 
-.country-buttons a:visited {
+.country-buttons a:visited, a:active {
   color: inherit;
 }
 
