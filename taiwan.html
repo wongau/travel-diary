@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Audrey's Travel Diary</title>
-<link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audrey's Travel Diary</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
    <body>
-        <textarea>taiwan</textarea>
+        <div class="menu-bar">
+            <button class="menuButton" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav-menu">
+                <img src="images/kisspng-menu-hamburger-button-computer-icons-torrance-horizontal-line-5ad750d2770595.9475996115240603704875.png">
+                Menu
+            </button>
+            <nav id="menuList" class="hidden">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="taiwan.html">Taiwan</a></li>
+                    <li><a href="japan.html">Japan</a></li>
+                    <li><a href="hawaii.html">Hawai'i</a></li>
+                    <li><a href="mexico.html">Mexico</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="country-name">
+            <p>TAIWAN</p>
+        </div>
+
+        <div class="section">
+            <div class="carousel">
+                <button class="nav prev">&lt;</button>
+                <div class="carousel-track">
+                    <img src="images/taiwan/IMG_9008.jpeg" alt="image of view from taipei 101 at night" class="carousel-photo">
+                    <img src="images/taiwan/IMG_9061.jpeg" alt="image of rainy mountainside" class="carousel-photo">
+                    <img src="images/taiwan/IMG_8474.jpeg" alt="image of mountain from beach" class="carousel-photo">
+                </div>
+                <button class="nav next">&gt;</button>
+              </div>
+
+            <div class="blurb">
+                <p>this is blah</p>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
     </body>
 </html>

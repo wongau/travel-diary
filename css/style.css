@@ -243,3 +243,78 @@ body, html {
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+.country-name {
+  justify-items: center;
+  background-color: #ffe4e1;
+  margin: 20px;
+  border-radius: 10%;
+}
+
+.country-name p{
+  font-size: 80px;
+}
+
+.section {
+  justify-items: center;
+}
+
+/* Carousel container */
+.carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+/* Carousel track */
+.carousel-track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+
+/* Images */
+.carousel-photo {
+  width: 200px;
+  height: 300px;
+  margin: 0 -50px;
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.carousel-photo.active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 1;
+}
+
+/* Navigation buttons */
+.nav {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 2;
+}
+
+.nav.prev {
+  position: absolute;
+  left: 10px;
+}
+
+.nav.next {
+  position: absolute;
+  right: 10px;
+}
+
+.nav:hover {
+  background: #555;
+}

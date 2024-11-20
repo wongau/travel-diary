@@ -33,3 +33,37 @@ function adjustMenuPosition(menuBar, menu) {
         menu.classList.remove('downwards', 'upwards');
     }
 }
+
+const track = document.querySelector('.carousel-track');
+const photos = Array.from(track.children);
+const prevButton = document.querySelector('.nav.prev');
+const nextButton = document.querySelector('.nav.next');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  photos.forEach((photo, index) => {
+    const offset = index - currentIndex;
+
+    photo.classList.remove('active');
+    photo.style.transform = `translateX(${offset * 100}%) scale(${Math.max(0.8, 1 - Math.abs(offset) * 0.2)})`;
+    photo.style.opacity = Math.max(0.5, 1 - Math.abs(offset) * 0.5);
+
+    if (offset === 0) {
+      photo.classList.add('active');
+    }
+  });
+}
+
+prevButton.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+  updateCarousel();
+});
+
+nextButton.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % photos.length;
+  updateCarousel();
+});
+
+// Initialize carousel
+updateCarousel();
