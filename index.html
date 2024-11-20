@@ -17,16 +17,22 @@
             <img class="overlay-image" src="images/kisspng-computer-icons-photography-national-school-de-la-p-down-arrow-5b23bcc5490d81.6026249015290687412992.png" alt="arrow">
         </div>          
 
-        <div class="menu-bar" id="menuBar">
-            <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="taiwan.html">Taiwan</a></li>
-            <li><a href="japan.html">Japan</a></li>
-            <li><a href="hawaii.html">Hawai'i</a></li>
-            <li><a href="mexico.html">Mexico</a></li>
-            </ul>
+        <div class="menu-bar">
+            <button class="menuButton" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav-menu">
+                <img src="images/kisspng-menu-hamburger-button-computer-icons-torrance-horizontal-line-5ad750d2770595.9475996115240603704875.png">
+                Menu
+            </button>
+            <nav id="menuList" class="hidden">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="taiwan.html">Taiwan</a></li>
+                    <li><a href="japan.html">Japan</a></li>
+                    <li><a href="hawaii.html">Hawai'i</a></li>
+                    <li><a href="mexico.html">Mexico</a></li>
+                </ul>
+            </nav>
         </div>
-
+        
         <div class="about-me">
             <img src="images/IMG_9760.jpeg" alt="Image of Audrey">
             <div class="bio-text">
@@ -58,5 +64,8 @@
                 <img src="images/mexico/IMG_5746.jpeg" alt="Image of the the ocean, from the beach">
             </a>
         </div>
+
+        <script src="js/script.js"></script>
+
     </body>
 </html>

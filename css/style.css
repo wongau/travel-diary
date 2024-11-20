@@ -39,39 +39,109 @@ body, html {
   bottom: 0;
   width: 100%;
   height: 5%;
-  overflow: hidden;
   background-color: #c8e5f5;
   padding: 10px 0;
   transition: bottom 0.3s ease-out;
   z-index: 10;
+  text-align: center;
+  justify-items: center;
 }
 
-.menu-bar ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu-bar li {
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  border-right: solid black 1px; /* Add border between items */
-}
-
-.menu-bar li:last-child {
-  border-right: none; /* Remove border from the last item */
-}
-
-.menu-bar a {
+.menuButton {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #c8e5f5;
   color: black;
-  text-decoration: none;
-  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 25px;
   font-weight: bold;
+  display: flex; /* Enable Flexbox */
+  align-items: center; /* Vertically align image and text */
+  gap: 10px; /* Space between image and text */
 }
+
+.menuButton img {
+  height: 100%; /* Makes the image height the same as the text */
+  max-height: 25px; /* Optionally limit the maximum height of the image */
+}
+
+.downwards {
+  top: 100%;
+}
+
+.upwards {
+  bottom: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+#menuList {
+  list-style-type: none;
+  background-color: #c8e5f5;
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+}
+
+#menuList ul {
+  justify-items: center;
+}
+
+#menuList li {
+  padding: 15px 0px 15px 0px;
+  text-align: center; /* Center text inside list items */
+  border-bottom: solid black 1px;
+  width: 50%; /* Make li take up full width */
+}
+
+#menuList li:last-child {
+  border-bottom: none; 
+}
+
+#menuList li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+#menuList li a:hover {
+  background-color: #c8e5f5;
+}
+
+/* 
+@media (min-width: 800px) {
+  .menu-bar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-bar li {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-right: solid black 1px;
+  }
+
+  .menu-bar li:last-child {
+    border-right: none; 
+  }
+
+  .menu-bar a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+  }
+} */
 
 .about-me {
   padding: 20px; /* Add padding around the section */
