@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audrey's Travel Diary</title>
+    <title>audrey's travel diary</title>
+    <link rel="stylesheet" href="dist/css/lightbox.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +12,157 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
    <body>
-        <textarea>hawaii</textarea>
+        <div class="menu-bar">
+            <button class="menuButton" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav-menu">
+                <img src="images/kisspng-menu-hamburger-button-computer-icons-torrance-horizontal-line-5ad750d2770595.9475996115240603704875.png">
+                menu
+            </button>
+            <nav id="menuList" class="hidden">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="taiwan.html">taiwan</a></li>
+                    <li><a href="japan.html">japan</a></li>
+                    <li><a href="hawaii.html">hawai'i</a></li>
+                    <li><a href="mexico.html">mexico</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="country-header">
+            <div class="videos">
+                <video class="carousel-photo" autoplay loop muted>
+                    <source src="images/hawaii/IMG_9497.MOV" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <video class="carousel-photo" autoplay loop muted>
+                    <source src="images/hawaii/IMG_9606.MOV" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+
+            <div class="country-name">
+                <p>hawai'i</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel">
+                <button class="nav prev">&lt;</button>
+                <div class="carousel-track">
+                    <a href="images/hawaii/IMG_9853.jpeg" data-lightbox="waterfall" data-title="waterfall on road to hana">
+                        <img src="images/hawaii/IMG_9853.jpeg" alt="waterfall on road to hana" class="carousel-photo">
+                    </a>
+                    <a href="images/hawaii/IMG_9871.jpeg" data-lightbox="waterfall" data-title="waterfall on road to hana">
+                        <img src="images/hawaii/IMG_9871.jpeg" alt="waterfall on road to hana" class="carousel-photo">
+                    </a>
+                    <a href="images/hawaii/IMG_9489.jpeg" data-lightbox="waterfall" data-title="waterfall with a pool under it">
+                        <img src="images/hawaii/IMG_9489.jpeg" alt="waterfall with a pool under it" class="carousel-photo">
+                    </a>
+                </div>
+                <button class="nav next">&gt;</button>
+            </div>
+
+            <div class="blurb">
+                <h2>waterfalls</h2>
+                <p>hawai'i had soo many waterfalls! they were all beautiful, especially the ones along road to hana, a 64 mi long highway on the island of maui, with various stops along the way with beautiful hikes and views.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel">
+                <button class="nav prev">&lt;</button>
+                <div class="carousel-track">
+                    <a href="images/hawaii/IMG_9510.jpeg" data-lightbox="animal" data-title="two sea turtles on the beach">
+                        <img src="images/hawaii/IMG_9510.jpeg" alt="two sea turtles on the beach" class="carousel-photo">
+                    </a>
+                    <a href="images/hawaii/IMG_4072.jpeg" data-lightbox="animal" data-title="a seal, viewed from a boat">
+                        <img src="images/hawaii/IMG_4072.jpeg" alt="a seal, viewed from a boat" class="carousel-photo">
+                    </a>
+                    <a href="images/hawaii/IMG_9529.jpeg" data-lightbox="animal" data-title="jellyfish in an aquarium">
+                        <img src="images/hawaii/IMG_9529.jpeg" alt="jellyfish in an aquarium" class="carousel-photo">
+                    </a>
+                    <a href="images/hawaii/IMG_9520.jpeg" data-lightbox="animal" data-title="emo nemo">
+                        <img src="images/hawaii/IMG_9520.jpeg" alt="emo nemo, a black clown fish" class="carousel-photo">
+                    </a>
+                </div>
+                <button class="nav next">&gt;</button>
+            </div>
+
+            <div class="blurb">
+                <h2>animals</h2>
+                <p>it was amazing getting to see all the wildlife in hawai'i! seeing sea turtles up close was especially cool for me, as they are one of my favorite animals. we snorkeled alongside the seal, and it was so friendly and playful! it stuck around with our group for such a long time. the black clown fish's name, emo nemo, made me laugh.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel">
+                <button class="nav prev">&lt;</button>
+                <div class="carousel-track">
+                    <a href="images/hawaii/IMG_9818.jpeg" data-lightbox="black-sand" data-title="inside a black sand cave">
+                        <img src="images/hawaii/IMG_9818.jpeg" alt="inside a black sand cave" class="carousel-photo">
+                    </a>
+                    <a href="images/hawaii/IMG_9755.jpeg" data-lightbox="black-sand" data-title="black sand beach">
+                        <img src="images/hawaii/IMG_9755.jpeg" alt="black sand beach" class="carousel-photo">
+                    </a>
+                </div>
+                <button class="nav next">&gt;</button>
+            </div>
+
+            <div class="blurb">
+                <h2>black sand beach</h2>
+                <p>the black sand beach on the road to hana was awesome! i've never seen black sand, remnants of volcanic rock, before.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel">
+                <button class="nav prev">&lt;</button>
+                <div class="carousel-track">
+                    <a href="images/hawaii/IMG_9709.jpeg" data-lightbox="sunset" data-title="sunset from the top of haleakalā">
+                        <img src="images/hawaii/IMG_9709.jpeg" alt="sunset from the top of haleakalā" class="carousel-photo">
+                    </a>
+                    <a href="images/hawaii/IMG_9365.jpeg" data-lightbox="sunset" data-title="sunset from the beach in o'ahu">
+                        <img src="images/hawaii/IMG_9365.jpeg" alt="sunset from the beach in o'ahu" class="carousel-photo">
+                    </a>
+                    <a href="images/hawaii/IMG_9471.jpeg" data-lightbox="sunset" data-title="sunset with a view of palm trees">
+                        <img src="images/hawaii/IMG_9471.jpeg" alt="sunset with a view of palm trees" class="carousel-photo">
+                    </a>
+                </div>
+                <button class="nav next">&gt;</button>
+            </div>
+
+            <div class="blurb">
+                <h2>sunsets</h2>
+                <p>i did not experience one bad sunset while in hawai'i. the boolest one was the one we viewed at the top of haleakalā, the tallest mountin on the island of maui. the summit's elevation is 10,023 ft!</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel">
+                <button class="nav prev">&lt;</button>
+                <div class="carousel-track">
+                    <a href="images/hawaii/IMG_9478.jpeg" data-lightbox="trees" data-title="path ">
+                        <img src="images/hawaii/IMG_9478.jpeg" alt="close-up of a deer at nara park" class="carousel-photo">
+                    </a>
+                    <a href="images/hawaii/IMG_9346.jpeg" data-lightbox="trees" data-title="me feeding a deer">
+                        <img src="images/hawaii/IMG_9346.jpeg" alt="me feeding a deer" class="carousel-photo">
+                    </a>
+                    <a href="images/hawaii/IMG_9636.jpeg" data-lightbox="trees" data-title="me feeding a deer">
+                        <img src="images/hawaii/IMG_9636.jpeg" alt="me feeding a deer" class="carousel-photo">
+                    </a>
+                </div>
+                <button class="nav next">&gt;</button>
+            </div>
+
+            <div class="blurb">
+                <h2>deer at nara park</h2>
+                <p>the deer at nara park are so friendly! they will do almost anything for some food, including slobbering all over you. they will also always bow back to you in exchange for food.</p>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+        <script src="dist/js/lightbox-plus-jquery.js"></script>
     </body>
 </html>

@@ -259,6 +259,11 @@ video {
   border-radius: 10px;
 }
 
+.videos {
+  display: flex;
+  
+}
+
 .country-name {
   justify-items: center;
 }
