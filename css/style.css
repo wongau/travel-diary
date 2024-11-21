@@ -332,6 +332,11 @@ video {
   justify-items: center;
 }
 
+.blurb h2 {
+  font-size: 30px;
+}
+
 .blurb p {
   text-align: center;
+  margin-top: 20px;
 }

@@ -34,48 +34,49 @@ function adjustMenuPosition(menuBar, menu) {
     }
 }
 
-const track = document.querySelector('.carousel-track');
-const photos = Array.from(track.querySelectorAll('.carousel-photo'));
-const prevButton = document.querySelector('.nav.prev');
-const nextButton = document.querySelector('.nav.next');
+document.querySelectorAll('.carousel').forEach((carousel) => {
+  const track = carousel.querySelector('.carousel-track');
+  const photos = Array.from(track.querySelectorAll('.carousel-photo'));
+  const prevButton = carousel.querySelector('.nav.prev');
+  const nextButton = carousel.querySelector('.nav.next');
 
-let currentIndex = 0;
+  let currentIndex = 0;
 
-function updateCarousel() {
-    const carouselWidth = document.querySelector('.carousel').offsetWidth;
-    const photoWidth = photos[0].offsetWidth; 
+  function updateCarousel() {
+    const carouselWidth = carousel.offsetWidth;
+    const photoWidth = photos[0].offsetWidth;
     const gap = parseFloat(getComputedStyle(photos[0]).marginRight) || 0;
-  
+
     // Calculate the offset to center the active photo
     const trackOffset = (carouselWidth / 2) - (photoWidth / 2);
-  
+
     // Move the track so the active photo is centered
     track.style.transform = `translateX(${-currentIndex * (photoWidth + gap) + trackOffset}px)`;
-  
+
     // Update photo styles
     photos.forEach((photo, index) => {
       const offset = index - currentIndex;
-  
+
       photo.classList.remove('active');
       photo.style.transform = `scale(${Math.max(0.8, 1 - Math.abs(offset) * 0.2)})`;
       photo.style.opacity = Math.max(0.5, 1 - Math.abs(offset) * 0.5);
-  
+
       if (offset === 0) {
         photo.classList.add('active');
       }
     });
   }
-  
 
-prevButton.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+  prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+    updateCarousel();
+  });
+
+  nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % photos.length;
+    updateCarousel();
+  });
+
+  // Initialize carousel
   updateCarousel();
 });
-
-nextButton.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % photos.length;
-  updateCarousel();
-});
-
-// Initialize carousel
-updateCarousel();
