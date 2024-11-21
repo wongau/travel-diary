@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audrey's Travel Diary</title>
+    <title>audrey's travel diary</title>
+    <link rel="stylesheet" href="dist/css/lightbox.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +12,97 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
    <body>
-        <textarea>mexico</textarea>
+        <div class="menu-bar">
+            <button class="menuButton" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav-menu">
+                <img src="images/kisspng-menu-hamburger-button-computer-icons-torrance-horizontal-line-5ad750d2770595.9475996115240603704875.png">
+                menu
+            </button>
+            <nav id="menuList" class="hidden">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="taiwan.html">taiwan</a></li>
+                    <li><a href="japan.html">japan</a></li>
+                    <li><a href="hawaii.html">hawai'i</a></li>
+                    <li><a href="mexico.html">mexico</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="country-header">
+            <video class="carousel-photo" autoplay loop muted>
+                <source src="images/mexico/IMG_6460.MOV" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="country-name">
+                <p>mexico</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel">
+                <button class="nav prev">&lt;</button>
+                <div class="carousel-track">
+                    <a href="images/mexico/IMG_6224.jpeg" data-lightbox="cenote" data-title="cenote in tulum">
+                        <img src="images/mexico/IMG_6224.jpeg" alt="cenote in tulum" class="carousel-photo">
+                    </a>
+                    <a href="images/mexico/IMG_6160.jpeg" data-lightbox="cenote" data-title="sunrise before tulum day trip">
+                        <img src="images/mexico/IMG_6160.jpeg" alt="sunrise before tulum day trip" class="carousel-photo">
+                    </a>
+                </div>
+                <button class="nav next">&gt;</button>
+            </div>
+
+            <div class="blurb">
+                <h2>cenotes</h2>
+                <p>tulum, mexico has these beautiful natural pits, or sinkholes, called cenotes. we went on a day trip to visit one and it was beautiful! the water was so clear. i wish i got more pictures, but we were too busy swimming.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel">
+                <button class="nav prev">&lt;</button>
+                <div class="carousel-track">
+                    <a href="images/mexico/IMG_5876.jpeg" data-lightbox="market" data-title="decorative plates">
+                        <img src="images/mexico/IMG_5876.jpeg" alt="decorative plates" class="carousel-photo">
+                    </a>
+                    <a href="images/mexico/IMG_5902.jpeg" data-lightbox="market" data-title="a colorful alleyway in the market">
+                        <img src="images/mexico/IMG_5902.jpeg" alt="a colorful alleyway in the market" class="carousel-photo">
+                    </a>
+                </div>
+                <button class="nav next">&gt;</button>
+            </div>
+
+            <div class="blurb">
+                <h2>market</h2>
+                <p>my friends and i visited this (very touristy) market! there were so many shops and vendors trying to sell things to us, which made it chaotic, but it was a really cool experience!</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel">
+                <button class="nav prev">&lt;</button>
+                <div class="carousel-track">
+                    <a href="images/mexico/IMG_6191.jpeg" data-lightbox="ruins" data-title="wall made of rocks">
+                        <img src="images/mexico/IMG_6191.jpeg" alt="wall made of rocks" class="carousel-photo">
+                    </a>
+                    <a href="images/mexico/IMG_6203.jpeg" data-lightbox="ruins" data-title="stray cat relaxing on the ground">
+                        <img src="images/mexico/IMG_6203.jpeg" alt="stray cat relaxing on the ground" class="carousel-photo">
+                    </a>
+                    <a href="images/mexico/IMG_6163.jpeg" data-lightbox="ruins" data-title="mayan ruins">
+                        <img src="images/mexico/IMG_6163.jpeg" alt="mayan ruins" class="carousel-photo">
+                    </a>
+                </div>
+                <button class="nav next">&gt;</button>
+            </div>
+
+            <div class="blurb">
+                <h2>mayan ruins</h2>
+                <p>during our little day trip, we also visited some mayan ruins! it was amazing seeing the architecture that has held up for years and years.</p>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+        <script src="dist/js/lightbox-plus-jquery.js"></script>
     </body>
 </html>
