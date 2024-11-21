@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audrey's Travel Diary</title>
+    <title>audrey's travel diary</title>
+    <link rel="stylesheet" href="dist/css/lightbox.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +12,140 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
    <body>
-        <textarea>japan</textarea>
+        <div class="menu-bar">
+            <button class="menuButton" onclick="toggleMenu()" aria-expanded="false" aria-controls="nav-menu">
+                <img src="images/kisspng-menu-hamburger-button-computer-icons-torrance-horizontal-line-5ad750d2770595.9475996115240603704875.png">
+                menu
+            </button>
+            <nav id="menuList" class="hidden">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="taiwan.html">taiwan</a></li>
+                    <li><a href="japan.html">japan</a></li>
+                    <li><a href="hawaii.html">hawai'i</a></li>
+                    <li><a href="mexico.html">mexico</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="country-header">
+            <video class="carousel-photo" autoplay loop muted>
+                <source src="images/japan/IMG_5291.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="country-name">
+                <p>japan</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel">
+                <button class="nav prev">&lt;</button>
+                <div class="carousel-track">
+                    <a href="images/japan/IMG_0571.jpeg" data-lightbox="kyoto-path" data-title="fushimi inari taisha">
+                        <img src="images/japan/IMG_0571.jpeg" alt="fushimi inari taisha" class="carousel-photo">
+                    </a>
+                    <a href="images/japan/IMG_0638.jpeg" data-lightbox="kyoto-path" data-title="stray cat on the path">
+                        <img src="images/japan/IMG_0638.jpeg" alt="stray cat on the path" class="carousel-photo">
+                    </a>
+                    <a href="images/japan/IMG_0471.jpeg" data-lightbox="kyoto-path" data-title="bamboo forest">
+                        <img src="images/japan/IMG_0471.jpeg" alt="bamboo forest" class="carousel-photo">
+                    </a>
+                </div>
+                <button class="nav next">&gt;</button>
+            </div>
+
+            <div class="blurb">
+                <h2>kyoto's nature</h2>
+                <p>kyoto, a city in japan, was perfect! the fushimi inari taisah trail, in particular, was awesome to hike up. there are around 10,000 torii gates along that path!</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel">
+                <button class="nav prev">&lt;</button>
+                <div class="carousel-track">
+                    <a href="images/japan/IMG_9525.jpeg" data-lightbox="street-views" data-title="osaka's main street at night">
+                        <img src="images/japan/IMG_9525.jpeg" alt="nighttime view from taipei 101" class="carousel-photo">
+                    </a>
+                    <a href="images/japan/IMG_9518.jpeg" data-lightbox="street-views" data-title="taken while on the hunt for dinner">
+                        <img src="images/japan/IMG_9518.jpeg" alt="osaka alleyway at sunset" class="carousel-photo">
+                    </a>
+                    <a href="images/japan/IMG_9503.jpeg" data-lightbox="street-views" data-title="pokemon on the big screen">
+                        <img src="images/japan/IMG_9503.jpeg" alt="pokemon on a big screen in osaka" class="carousel-photo">
+                    </a>
+                </div>
+                <button class="nav next">&gt;</button>
+            </div>
+
+            <div class="blurb">
+                <h2>osaka's streets at night</h2>
+                <p>osaka, another city in japan, has streets that come alive at night.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel">
+                <button class="nav prev">&lt;</button>
+                <div class="carousel-track">
+                    <a href="images/japan/IMG_0206.jpeg" data-lightbox="kimono" data-title="my sister and i in kimonos">
+                        <img src="images/japan/IMG_0206.jpeg" alt="my sister and i in kimonos" class="carousel-photo">
+                    </a>
+                    <a href="images/japan/IMG_0136.jpeg" data-lightbox="kimono" data-title="red temple in kyoto">
+                        <img src="images/japan/IMG_0136.jpeg" alt="red temple in kyoto" class="carousel-photo">
+                    </a>
+                </div>
+                <button class="nav next">&gt;</button>
+            </div>
+
+            <div class="blurb">
+                <h2>kimonos</h2>
+                <p>my family and i dressed up in kimonos and explored for a bit! it was so hot this day, so we were all overheating. major respect for the people who wore them every single day!</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel">
+                <button class="nav prev">&lt;</button>
+                <div class="carousel-track">
+                    <a href="images/japan/IMG_9681.jpeg" data-lightbox="castle" data-title="osaka castle up close">
+                        <img src="images/japan/IMG_9681.jpeg" alt="osaka castle up close" class="carousel-photo">
+                    </a>
+                    <a href="images/japan/IMG_9688.jpeg" data-lightbox="castle" data-title="osaka castle from a nearby garden">
+                        <img src="images/japan/IMG_9688.jpeg" alt="osaka castle from a nearby garden" class="carousel-photo">
+                    </a>
+                </div>
+                <button class="nav next">&gt;</button>
+            </div>
+
+            <div class="blurb">
+                <h2>osaka castle</h2>
+                <p>seeing the osaka castle and its grounds was breathtaking! it is beautifully constructed; architecture is awesome!</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="carousel">
+                <button class="nav prev">&lt;</button>
+                <div class="carousel-track">
+                    <a href="images/japan/IMG_9866.jpeg" data-lightbox="deer" data-title="close-up of a deer at nara park">
+                        <img src="images/japan/IMG_9866.jpeg" alt="close-up of a deer at nara park" class="carousel-photo">
+                    </a>
+                    <a href="images/japan/IMG_5288.JPG" data-lightbox="deer" data-title="me feeding a deer">
+                        <img src="images/japan/IMG_5288.JPG" alt="me feeding a deer" class="carousel-photo">
+                    </a>
+                </div>
+                <button class="nav next">&gt;</button>
+            </div>
+
+            <div class="blurb">
+                <h2>deer at nara park</h2>
+                <p>the deer at nara park are so friendly! they will do almost anything for some food, including slobbering all over you. they will also always bow back to you in exchange for food.</p>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+        <script src="dist/js/lightbox-plus-jquery.js"></script>
     </body>
 </html>
