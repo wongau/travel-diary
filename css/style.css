@@ -40,7 +40,8 @@ body, html {
   width: 100%;
   height: 5%;
   background-color: #c8e5f5;
-  padding: 10px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
   transition: bottom 0.3s ease-out;
   z-index: 10;
   text-align: center;
@@ -114,9 +115,16 @@ body, html {
   background-color: #c8e5f5;
 }
 
-/* 
 @media (min-width: 800px) {
-  .menu-bar ul {
+  .menuButton {
+    display: none;
+  }
+
+  #menuList {
+    display: block; /* Always show the links */
+  }
+
+  #menuList ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,25 +132,26 @@ body, html {
     padding: 0;
     margin: 0;
   }
-
-  .menu-bar li {
+ 
+  #menuList li {
     padding: 15px;
     display: flex;
     align-items: center;
     border-right: solid black 1px;
+    border-bottom: none;
   }
-
-  .menu-bar li:last-child {
+  
+  #menuList li:last-child {
     border-right: none; 
   }
 
-  .menu-bar a {
+  #menuList a {
     color: black;
     text-decoration: none;
     font-size: 15px;
     font-weight: bold;
   }
-} */
+}
 
 .about-me {
   padding: 20px; /* Add padding around the section */
@@ -261,7 +270,7 @@ video {
 
 .videos {
   display: flex;
-  
+
 }
 
 .country-name {
