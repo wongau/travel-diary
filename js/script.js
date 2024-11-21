@@ -42,18 +42,30 @@ const nextButton = document.querySelector('.nav.next');
 let currentIndex = 0;
 
 function updateCarousel() {
-  photos.forEach((photo, index) => {
-    const offset = index - currentIndex;
-
-    photo.classList.remove('active');
-    photo.style.transform = `translateX(${offset * 100}%) scale(${Math.max(0.8, 1 - Math.abs(offset) * 0.2)})`;
-    photo.style.opacity = Math.max(0.5, 1 - Math.abs(offset) * 0.5);
-
-    if (offset === 0) {
-      photo.classList.add('active');
-    }
-  });
-}
+    const carouselWidth = document.querySelector('.carousel').offsetWidth;
+    const photoWidth = photos[0].offsetWidth; 
+    const gap = parseFloat(getComputedStyle(photos[0]).marginRight) || 0;
+  
+    // Calculate the offset to center the active photo
+    const trackOffset = (carouselWidth / 2) - (photoWidth / 2);
+  
+    // Move the track so the active photo is centered
+    track.style.transform = `translateX(${-currentIndex * (photoWidth + gap) + trackOffset}px)`;
+  
+    // Update photo styles
+    photos.forEach((photo, index) => {
+      const offset = index - currentIndex;
+  
+      photo.classList.remove('active');
+      photo.style.transform = `scale(${Math.max(0.8, 1 - Math.abs(offset) * 0.2)})`;
+      photo.style.opacity = Math.max(0.5, 1 - Math.abs(offset) * 0.5);
+  
+      if (offset === 0) {
+        photo.classList.add('active');
+      }
+    });
+  }
+  
 
 prevButton.addEventListener('click', () => {
   currentIndex = (currentIndex - 1 + photos.length) % photos.length;

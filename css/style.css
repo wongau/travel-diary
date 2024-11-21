@@ -259,30 +259,26 @@ body, html {
   justify-items: center;
 }
 
-/* Carousel container */
 .carousel {
   display: flex;
   align-items: center;
   position: relative;
   width: 80%;
   max-width: 800px;
-  overflow: hidden;
 }
 
-/* Carousel track */
 .carousel-track {
   display: flex;
   justify-content: center;
   align-items: center;
   transition: transform 0.5s ease-in-out;
   position: relative;
+  flex-wrap: nowrap;
 }
 
-/* Images */
 .carousel-photo {
   width: 200px;
   height: 300px;
-  margin: 0 -50px;
   opacity: 0.5;
   transform: scale(0.8);
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
@@ -294,7 +290,6 @@ body, html {
   z-index: 1;
 }
 
-/* Navigation buttons */
 .nav {
   background: #333;
   color: #fff;
@@ -317,4 +312,8 @@ body, html {
 
 .nav:hover {
   background: #555;
+}
+
+.blurb {
+  margin: 20px;
 }
