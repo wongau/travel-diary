@@ -35,7 +35,7 @@ function adjustMenuPosition(menuBar, menu) {
 }
 
 const track = document.querySelector('.carousel-track');
-const photos = Array.from(track.children);
+const photos = Array.from(track.querySelectorAll('.carousel-photo'));
 const prevButton = document.querySelector('.nav.prev');
 const nextButton = document.querySelector('.nav.next');
 

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audrey's Travel Diary</title>
+    <link rel="stylesheet" href="dist/css/lightbox.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,26 +28,39 @@
             </nav>
         </div>
 
-        <div class="country-name">
-            <p>TAIWAN</p>
+        <div class="country-header">
+            <video class="carousel-photo" autoplay loop muted>
+                <source src="images/taiwan/IMG_9188.MOV" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="country-name">
+                <p>TAIWAN</p>
+            </div>
         </div>
 
         <div class="section">
             <div class="carousel">
                 <button class="nav prev">&lt;</button>
                 <div class="carousel-track">
-                    <img src="images/taiwan/IMG_9008.jpeg" alt="image of view from taipei 101 at night" class="carousel-photo">
-                    <img src="images/taiwan/IMG_9061.jpeg" alt="image of rainy mountainside" class="carousel-photo">
-                    <img src="images/taiwan/IMG_8474.jpeg" alt="image of mountain from beach" class="carousel-photo">
+                    <a href="images/taiwan/IMG_9061.jpeg" data-lightbox="views" data-title="rainy mountainside view">
+                        <img src="images/taiwan/IMG_9061.jpeg" alt="image of rainy mountainside" class="carousel-photo">
+                    </a>
+                    <a href="images/taiwan/IMG_8474.jpeg" data-lightbox="views" data-title="view of a mountain">
+                        <img src="images/taiwan/IMG_8474.jpeg" alt="image of mountain from beach" class="carousel-photo">
+                    </a>
                 </div>
+                
                 <button class="nav next">&gt;</button>
             </div>
 
             <div class="blurb">
-                <p>this is blah</p>
+                <h2>nature views of taiwan</h2>
+                <p>i may be biased, but taiwan has the best nature in the world. the mountains are simply beautiful!</p>
             </div>
         </div>
 
         <script src="js/script.js"></script>
+        <script src="dist/js/lightbox-plus-jquery.js"></script>
     </body>
 </html>
