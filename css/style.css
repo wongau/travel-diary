@@ -97,7 +97,7 @@ body, html {
   padding: 15px 0px 15px 0px;
   text-align: center; /* Center text inside list items */
   border-bottom: solid black 1px;
-  width: 50%; /* Make li take up full width */
+  width: 50%;
 }
 
 #menuList li:last-child {
@@ -115,46 +115,9 @@ body, html {
   background-color: #c8e5f5;
 }
 
-@media (min-width: 800px) {
-  .menuButton {
-    display: none;
-  }
-
-  #menuList {
-    display: block; /* Always show the links */
-  }
-
-  #menuList ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
- 
-  #menuList li {
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    border-right: solid black 1px;
-    border-bottom: none;
-  }
-  
-  #menuList li:last-child {
-    border-right: none; 
-  }
-
-  #menuList a {
-    color: black;
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: bold;
-  }
-}
-
 .about-me {
   padding: 20px; /* Add padding around the section */
+  padding-top: 70px;
   text-align: center; /* Center-align content inside the section */
   display: flex; /* Use flexbox for alignment */
   flex-direction: column; /* Stack items vertically */
@@ -353,4 +316,113 @@ video {
 .blurb p {
   text-align: center;
   margin-top: 20px;
+}
+
+@media (min-width: 800px) {
+  .menu-bar {
+    display: flex;
+    justify-content: center; /* Center the navigation cluster */
+    align-items: center;
+  }
+
+  .menuButton {
+    display: none; /* Hide the menu button on larger screens */
+  }
+
+  #menuList {
+    display: block; /* Always show the links */
+    width: auto; /* Fit content */
+  }
+
+  #menuList ul {
+    display: flex;
+    justify-content: center; /* Center the buttons inside the menu bar */
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #menuList li {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Ensure positioning for the pseudo-element */
+    border-bottom: none;
+  }
+  
+  #menuList li:not(:last-child)::after {
+    content: ''; /* Add a custom border */
+    position: absolute;
+    right: 0; /* Place the border on the right edge */
+    height: 50%; /* Reduce height to half of the button height */
+    width: 1px; /* Thickness of the border */
+    background-color: black; /* Border color */
+  }  
+
+  #menuList a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .about-me {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .about-me img {
+    width: 40%;
+  }
+
+  .bio-text {
+    width: 60%;
+  }
+
+  .bio-text p {
+    font-size: 25px;
+  }
+
+  .country-buttons {
+    gap: 100px;
+  }
+
+  .country-buttons a {
+    width: 50%;
+  }
+
+  .country-header {
+    width: 50%;
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .country-header video{
+    width: 50%;
+  }
+
+  .country-name {
+    align-content: center;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .carousel {
+    width: 70%;
+    overflow: hidden;
+  }
+
+  .videos {
+    gap: 10px;
+  }
+
+  .videos video {
+    width: 40%;
+  }
 }
