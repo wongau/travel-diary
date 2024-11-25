@@ -72,6 +72,7 @@ body, html {
 .menuButton {
   cursor: pointer;
   padding: 10px 20px;
+  padding-bottom: 0px;
   background-color: #c8e5f5;
   color: black;
   border: none;
@@ -325,6 +326,7 @@ video {
 
 .blurb h2 {
   font-size: 30px;
+  justify-self: center;
 }
 
 .blurb p {
