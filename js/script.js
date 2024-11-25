@@ -80,3 +80,12 @@ document.querySelectorAll('.carousel').forEach((carousel) => {
   // Initialize carousel
   updateCarousel();
 });
+
+// prefers reduced motion
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const videos = document.querySelectorAll('video');
+  videos.forEach(video => {
+    video.removeAttribute('autoplay');
+    video.pause(); // Ensure it's paused if it starts playing automatically
+  });
+}

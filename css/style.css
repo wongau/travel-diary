@@ -429,3 +429,33 @@ video {
     width: 40%;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  video {
+    animation: none; /* Disable animations */
+  }
+
+  /* Example for general animations */
+  * {
+    animation: none !important; /* Disable all CSS animations */
+    transition: none !important; /* Disable all transitions */
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1b2d48;
+  }
+
+  h1, p, .blurb h2 {
+    color: white;
+  }
+
+  .country-buttons a {
+    border: none;
+  }
+
+  .nav {
+    background: #646464;
+  }
+}
